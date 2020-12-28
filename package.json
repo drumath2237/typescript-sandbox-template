@@ -1,9 +1,6 @@
 {
   "name": "typescript-sandbox-template",
   "version": "0.1.0",
-  "main": "index.ts",
-  "repository": "https://github.com/drumath2237/typescript-sandbox-template.git",
-  "author": "drumath2237 <2237k.drumath@gmail.com>",
   "license": "Apache 2.0",
   "private": false,
   "scripts": {
