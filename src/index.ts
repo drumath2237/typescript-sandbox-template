@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  const dom = document.getElementById("message");
-  if (dom != null) {
-    dom.innerHTML = "Hello!!";
-  }
-});
+import "./style/index.scss"
+
+window.addEventListener("DOMContentLoaded", () => {
+  const messageElement = document.getElementById("message");
+  messageElement!.innerHTML = "☕ TypeScript Template"
+})
