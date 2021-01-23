@@ -20,6 +20,18 @@ const config: webpack.Configuration[] = [
           exclude: /node_modules/,
           loader: "ts-loader",
         },
+        {
+          test: /\.(sa|sc|c)ss$/,
+          exclude: /node_modules/,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {url: false}
+            },
+            "sass-loader"
+          ]
+        }
       ],
     },
     devServer: {
