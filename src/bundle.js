@@ -460,9 +460,9 @@ module.exports = function (list, options) {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 __webpack_require__(/*! ./style/index.scss */ "./src/style/index.scss");
-window.addEventListener("DOMContentLoaded", function () {
-    var messageElement = document.getElementById("message");
-    messageElement.innerHTML = "☕ TypeScript Template";
+window.addEventListener('DOMContentLoaded', function () {
+    var messageElement = document.getElementById('message');
+    messageElement.innerHTML = '☕ TypeScript Template';
 });
 
 
