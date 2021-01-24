@@ -1,50 +1,50 @@
 // const path = require('path');
-import * as path from "path";
-import * as webpack from "webpack";
-import "webpack-dev-server";
+import * as path from 'path';
+import * as webpack from 'webpack';
+import 'webpack-dev-server';
 
 const config: webpack.Configuration[] = [
   {
-    name: "local_dev",
-    mode: "development",
-    entry: "./src/index.ts",
-    devtool: "source-map",
+    name: 'local_dev',
+    mode: 'development',
+    entry: './src/index.ts',
+    devtool: 'source-map',
     output: {
-      filename: "bundle.js",
-      path: path.resolve(__dirname, "dist/src"),
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist/src'),
     },
     module: {
       rules: [
         {
           test: /\.ts$/,
           exclude: /node_modules/,
-          loader: "ts-loader",
+          loader: 'ts-loader',
         },
         {
           test: /\.(sa|sc|c)ss$/,
           exclude: /node_modules/,
           use: [
-            "style-loader",
+            'style-loader',
             {
-              loader: "css-loader",
-              options: {url: false}
+              loader: 'css-loader',
+              options: {url: false},
             },
-            "sass-loader"
-          ]
-        }
+            'sass-loader',
+          ],
+        },
       ],
     },
     devServer: {
       open: false,
-      openPage: "index.html",
-      contentBase: path.resolve(__dirname, "dist"),
+      openPage: 'index.html',
+      contentBase: path.resolve(__dirname, 'dist'),
       watchContentBase: true,
       port: 8080,
-      publicPath: "/src/",
+      publicPath: '/src/',
     },
     resolve: {
-      extensions: [".ts", ".js"],
-      modules: ["node_modules"],
+      extensions: ['.ts', '.js'],
+      modules: ['node_modules'],
     },
   },
 ];
